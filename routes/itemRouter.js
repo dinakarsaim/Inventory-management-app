@@ -1,8 +1,9 @@
 const {Router} = require("express"); 
-const {viewAllItems} = require("../controller/itemController");
+const {viewItem, viewAllItems} = require("../controller/itemController");
 
 const itemRouter = Router();
 
-itemRouter.get("/:itemId", viewAllItems);
+itemRouter.get("/", viewAllItems);
+itemRouter.get("/:itemId", viewItem);
 
 module.exports = itemRouter;

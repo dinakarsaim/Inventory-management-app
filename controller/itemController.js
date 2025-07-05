@@ -7,9 +7,15 @@ async function viewItem (req, res) {
     res.render("specificItem", {item});
 }
 
-async function viewAllItems (req, res) {
+async function viewsomeItems (req, res) {
+    const categories = await query.getallCategories();
     const items = await query.getAllItems();
-    res.render("index", {items});
+    res.render("index", {categories, items});
 }
 
-module.exports = {viewItem, viewAllItems};
+async function viewAllItems (req, res) {
+    const items = await query.getAllItems();
+    res.render("allItems", {items});
+}
+
+module.exports = {viewItem, viewAllItems, viewsomeItems};

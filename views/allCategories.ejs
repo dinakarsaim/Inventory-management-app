@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All categories</title>
+</head>
+<body>
+   <h1>Game Categories</h1>
+
+   <ul>
+      <% categories.forEach(category => { %>
+        <li>
+          <h3><%= category.name %></h3>
+          <p><%= category.description %></p>
+          <button type="button" onclick="location.href='/categories/<%= category.id %>'">View more</button>
+        </li>
+      <% }); %>
+    </ul>
+    <button type="button" onclick="location.href='/categories/create'">New Category</button>
+
+    
+</body>
+</html>

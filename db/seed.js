@@ -13,8 +13,8 @@ create table categories (
 insert into categories (name, description) values
     ('Fantasy', 'Genre of storytelling that features magical elements, mythical creatures, and imaginative worlds beyond the boundaries of reality.'),
     ('Suspense', 'Keeps readers on edge by unraveling secrets, following twists and turns, and revealing the truth through clever clues and unexpected outcomes.'),
-    ('Horror', 'Designed to evoke fear, dread, or shock, often featuring supernatural elements, psychological terror, or disturbing themes that challenge the boundaries of safety and reality.'),
-    ('Children', 'Books written for young readers, often featuring simple language, colorful illustrations, and imaginative stories that educate, entertain, and inspire creativity.'),
+    ('Horror', 'Designed to evoke fear, dread, or shock, often featuring supernatural elements, psychological terror, or disturbing themes.'),
+    ('Children', 'Books written for young readers, often featuring simple language, colorful illustrations, and imaginative stories that educate and entertain'),
     ('Self Help', 'Books focused on personal growth, mental well-being, and life improvement—offering strategies, insights, and motivation to help readers achieve their goals and overcome challenges.');
 
 CREATE TABLE items (
@@ -41,7 +41,7 @@ insert into items (name, author, description, image_url, price, quantity, catego
     ('The Shining', 'Stepehen King','The Shining is a chilling psychological horror novel that follows Jack Torrance, a struggling writer and recovering alcoholic, as he takes a job as the winter caretaker of the isolated Overlook Hotel.', '/shining.jpg', 582.00, 4, 3),
     ('Angels and Demons', 'Dan Brown','Angels & Demons is a fast-paced thriller that follows symbologist Robert Langdon as he races against time to stop a deadly plot by the secret society known as the Illuminati.', '/angels-and-demons.jpg', 350.00, 6, 2),
     ('Dracula', 'Bram Stoker','Dracula is a classic gothic horror novel that tells the chilling tale of Count Dracula''s attempt to move from Transylvania to England in search of new blood. ', '/dracula.jpg', 400.00, 7, 3),
-    ('The Hound of The Baskervilles', 'Arthur Conan Doyle','The Hound of the Baskervilles is a gripping Sherlock Holmes mystery that blends detective fiction with gothic horror.', '/hound.jpg', 150.00, 10, 3);
+    ('The Hound of The Baskervilles', 'Arthur Conan Doyle','The Hound of the Baskervilles is a gripping Sherlock Holmes mystery that blends detective fiction with gothic horror.', '/hound.jpg', 150.00, 10, 2);
 `;
 
 async function main () {

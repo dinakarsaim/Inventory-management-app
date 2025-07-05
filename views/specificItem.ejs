@@ -11,8 +11,21 @@
 <body>
 
     <%- include('navbar') %>
-    <h3><%= item.name %></h3>
-    <h3><%= item.description %></h3>
+
+    <div class="Itemdepict">
+        <div class="forImg">
+            <img src="<%= item.image_url %>" class="card-img-top fixed-img imgg">
+        </div>
+        <div class="itemInfo">
+            <ul>
+                <li class="itemList"><b><%= item.name %></b></li>
+                <li class="itemList"><b>Description : </b><%= item.description %></li>
+                <li class="itemList"><b>Price : </b><%= item.price %></li>
+                <li class="itemList"><b>No of Books : </b><%= item.quantity %></li>
+            </ul>
+
+        </div>
+    </div>
     
 </body>
 </html>

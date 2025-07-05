@@ -11,17 +11,27 @@
 <body>
 
     <%- include('navbar') %>
-    <h3><%= category.name %></h3>
-    <h3><%= category.description %></h3>
     
-    <ul>
-      <% items.forEach(item => { %>
-        <li>
-          <h3><%= item.name %></h3>
-          <p><%= item.description %></p>
-          <button type="button" onclick="location.href='/items/<%= item.id %>'">View more</button>
-        </li>
-      <% }); %>
-    </ul>
+    <div class="categoryWrap">
+        <div class="categoryItems">
+          <h3><%= category.name %></h3>
+          <p><%= category.description %></p>
+        </div>
+    </div>
+    <div class="popBelow">
+        <div class="cardContainer">
+            <% items.forEach(item => { %>
+                <a href="/items/<%= item.id %>" class="overCard">
+                    <div class="card" style="width: 16rem;">
+                    <img src="<%= item.image_url %>" class="card-img-top fixed-img" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"><b><%= item.name %></b></h5>
+                        <p class="card-text"><%= item.author%></p>
+                    </div>
+                    </div>
+                </a>
+            <% }); %>
+        </div>
+    </div>
 </body>
 </html>

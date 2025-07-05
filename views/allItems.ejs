@@ -13,11 +13,11 @@
     <%- include('navbar') %>
 
     <div class="popBelow">
-        <h2 class="heading">All Books</h2>
+        <h2 class="heading"><b>All Books</b></h2>
         <div class="cardContainer">
             <% items.forEach(item => { %>
                 <a href="/items/<%= item.id %>" class="overCard">
-                    <div class="card" style="width: 12rem;">
+                    <div class="card" style="width: 16rem;">
                     <img src="<%= item.image_url %>" class="card-img-top fixed-img" alt="...">
                     <div class="card-body">
                         <h5 class="card-title"><b><%= item.name %></b></h5>

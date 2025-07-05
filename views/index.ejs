@@ -13,26 +13,27 @@
     <%- include('navbar') %>
 
     <div class="pop">
-        <h2 class="heading">Popular Categories</h2>
+        <h2 class="heading"><b>Categories</b></h2>
         <div class="popCat">
             <% for (let i=0; i<4; i++) {  %>
+                <a href="/categories/<%= categories[i].id %>" class="overCard">
                 <div class="card" style="width: 18rem;">
                 <div class="card-body">
                     <h5 class="card-title"><b><%= categories[i].name %></b></h5>
                     <p class="card-text"><%= categories[i].description %></p>
-                    <a href="/categories/<%= categories[i].id %>" class="btn btn-primary butt"><b>View</b></a>
                 </div>
-                </div>    
+                </div>
+                </a>    
             <% }; %>
         </div>
     </div>
 
     <div class="popBelow">
-        <h2 class="heading">Featured Books</h2>
+        <h2 class="heading"><b>Books</b></h2>
         <div class="cardContainer">
-            <% for (let j =0; j<5; j++) {  %>
+            <% for (let j =0; j<4; j++) {  %>
                 <a href="/items/<%= items[j].id %>" class="overCard">
-                    <div class="card" style="width: 12rem;">
+                    <div class="card" style="width: 16rem;">
                     <img src="<%= items[j].image_url %>" class="card-img-top fixed-img" alt="...">
                     <div class="card-body">
                         <h5 class="card-title"><b><%= items[j].name %></b></h5>

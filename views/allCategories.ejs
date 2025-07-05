@@ -10,18 +10,18 @@
 </head>
 <body>
     <%- include('navbar') %>
-   <h1>Game Categories</h1>
+    <h2 class="heading"><b>All Categories</b></h2>
 
-   <ul>
-      <% categories.forEach(category => { %>
-        <li>
-          <h3><%= category.name %></h3>
+    <div class="categoryWrap">
+    <% categories.forEach(category => { %>
+        <div class="categoryItems">
+          <h3><b><%= category.name %></b></h3>
           <p><%= category.description %></p>
-          <button type="button" onclick="location.href='/categories/<%= category.id %>'">View more</button>
-        </li>
-      <% }); %>
-    </ul>
-    <button type="button" onclick="location.href='/categories/create'">New Category</button>
+          <button type="button" class="butt" onclick="location.href='/categories/<%= category.id %>'">See books</button>
+        </div>
+    <% }); %>
+    </div>
+    <button type="button" class="butt create-butt" onclick="location.href='/categories/create'">New Category</button>
 
     
 </body>

@@ -29,4 +29,17 @@ async function getAllItems () {
     return rows;
 }
 
-module.exports = {getallCategories, getCategory, insertCategory, getItems, getItem, getAllItems};
+async function insertItems (name, description, author, price, quantity, category_id) {
+    await db.query("insert into items (name, description, author, price, quantity, category_id) values ($1, $2, $3, $4, $5, $6)", [name, description, author, price, quantity, category_id]);
+}
+
+async function searchItems(term) {
+    const searchQuery = `
+        SELECT * FROM items
+        WHERE LOWER(name) LIKE LOWER($1) OR LOWER(author) LIKE LOWER($1)
+    `;
+    const { rows } = await db.query(searchQuery, [`%${term}%`]);
+    return rows[0];
+}
+
+module.exports = {getallCategories, getCategory, insertCategory, getItems, getItem, getAllItems, insertItems, searchItems};

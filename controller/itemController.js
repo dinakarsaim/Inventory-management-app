@@ -18,4 +18,20 @@ async function viewAllItems (req, res) {
     res.render("allItems", {items});
 }
 
-module.exports = {viewItem, viewAllItems, viewsomeItems};
+function renderitemForm (req, res) {
+    res.render("createItem");
+}
+
+async function insertItem (req, res) {
+    const {name, des, authorName, price, quantity, catId} = req.body;
+    await query.insertItems(name, des, authorName, price, quantity, catId);
+    res.redirect("/items");
+}
+
+async function searchItem (req, res) {
+    const searchTerm = req.query.q;
+    const results = await query.searchItems(searchTerm);
+    res.redirect(`/items/${results.id}`);
+}
+
+module.exports = {viewItem, viewAllItems, viewsomeItems, renderitemForm, insertItem, searchItem};

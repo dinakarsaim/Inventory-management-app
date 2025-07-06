@@ -14,11 +14,12 @@
 
     <div class="categoryWrap">
     <% categories.forEach(category => { %>
+      <a href="/categories/<%= category.id %>" class="overCard">
         <div class="categoryItems">
           <h3><b><%= category.name %></b></h3>
           <p><%= category.description %></p>
-          <button type="button" class="butt" onclick="location.href='/categories/<%= category.id %>'">See books</button>
         </div>
+      </a>
     <% }); %>
     </div>
     <button type="button" class="butt create-butt" onclick="location.href='/categories/create'">New Category</button>

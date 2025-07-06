@@ -8,7 +8,6 @@ async function createCategory (req, res) {
 
 async function viewAllCategories (req, res) {
     const categories = await query.getallCategories();
-    console.log("All Categories ", categories);
     res.render("allCategories", {categories});
 }
 
@@ -16,8 +15,6 @@ async function viewCategory (req, res) {
     const categoryId = parseInt(req.params.categoryId, 10);
     const items = await query.getItems(categoryId);
     const category = await query.getCategory(categoryId);
-    console.log("Category object:", category);
-    console.log("Item object:", items);
     res.render("specificCategory", {category, items});
 }
 

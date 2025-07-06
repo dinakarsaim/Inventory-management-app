@@ -12,8 +12,18 @@
 
     <%- include('navbar') %>
 
+    <div class="products-header">
+      <h2 class="search-bar">Books</h2>
+      <form action="/items/search" method="get" role="search">
+        <input type="search" class="search-bar input-bar" placeholder="Search for Books..." name="q" aria-label="Search">
+      </form>
+      <div class="products-header-actions search-bar">
+        <a href="/items/new" ><button class="butt">New Book</button></a>
+      </div>
+    </div>
+
     <div class="popBelow">
-        <h2 class="heading"><b>All Books</b></h2>
+        <!-- <h2 class="heading"><b>All Books</b></h2> -->
         <div class="cardContainer">
             <% items.forEach(item => { %>
                 <a href="/items/<%= item.id %>" class="overCard">

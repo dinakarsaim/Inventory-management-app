@@ -12,12 +12,35 @@
 
     <%- include('navbar') %>
 
-    <form action="items/create" method="post">
-        <label for="categoryName">Name</label>
-        <input type="text" id="categoryName" name="categoryName">
-        <label for="categoryDes">Name</label>
-        <input type="text" id="categoryDes" name="categoryDes">
-        <button type="submit">Submit</button>
-    </form>
+    <div class="inputForm">
+        <form action="/items/new" method="post">
+        <div class="mb-3 inputField">
+            <label for="name" class="form-label"><b>Name</b></label>
+            <input type="text" class="form-control inp" id="name" name="name">
+        </div>
+        <div class="mb-3 inputField">
+            <label for="des" class="form-label"><b>Description</b></label>
+            <input type="text" class="form-control inp" id="des" name="des">
+        </div>
+        <div class="mb-3 inputField">
+            <label for="authorName" class="form-label"><b>Author</b></label>
+            <input type="text" class="form-control inp" id="authorName" name="authorName">
+        </div>
+        <div class="mb-3 inputField">
+            <label for="price" class="form-label"><b>Price</b></label>
+            <input type="number" class="form-control inp" id="price" name="price">
+        </div>
+        <div class="mb-3 inputField">
+            <label for="quantity" class="form-label"><b>Quantity</b></label>
+            <input type="number" class="form-control inp" id="quantity" name="quantity">
+        </div>
+        <div class="mb-3 inputField">
+            <label for="catId" class="form-label"><b>Quantity</b></label>
+            <input type="number" class="form-control inp" id="catId" name="catId">
+        </div>
+        <button type="submit" class="btn btn-primary butt">Submit</button>
+        </form>
+    </div>
+    
 </body>
 </html>

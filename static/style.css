@@ -72,7 +72,7 @@ body {
 .card {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: beige;
-    margin: 5px 20px 5px 20px;
+    margin: 20px 20px 20px 20px;
 }
 
 .butt {
@@ -150,4 +150,23 @@ body {
 
 .inp {
     border: 0.9px solid black;
+}
+
+.products-header {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar {
+    padding: 0px 10px 0px 10px;
+}
+
+.input-bar {
+    border-radius: 1rem;
+}
+
+.seeAll {
+    color: inherit;
 }

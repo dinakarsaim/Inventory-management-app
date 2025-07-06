@@ -12,7 +12,17 @@
 
     <%- include('navbar') %>
 
-    <div class="pop">
+    <div class="products-header">
+      <h2 class="search-bar">Books</h2>
+      <form action="/items/search" method="get" role="search">
+        <input type="search" class="search-bar input-bar" placeholder="Search for Books..." name="q" aria-label="Search">
+      </form>
+      <div class="products-header-actions search-bar">
+        <a href="/items/new" ><button class="butt">New Book</button></a>
+      </div>
+    </div>
+
+    <!-- <div class="pop">
         <h2 class="heading"><b>Categories</b></h2>
         <div class="popCat">
             <% for (let i=0; i<4; i++) {  %>
@@ -26,12 +36,12 @@
                 </a>    
             <% }; %>
         </div>
-    </div>
+    </div> -->
 
     <div class="popBelow">
-        <h2 class="heading"><b>Books</b></h2>
+        <!-- <h2 class="heading"><b>Books</b></h2> -->
         <div class="cardContainer">
-            <% for (let j =0; j<4; j++) {  %>
+            <% for (let j =0; j<8; j++) {  %>
                 <a href="/items/<%= items[j].id %>" class="overCard">
                     <div class="card" style="width: 16rem;">
                     <img src="<%= items[j].image_url %>" class="card-img-top fixed-img" alt="...">
@@ -42,6 +52,7 @@
                     </div>
                 </a>
             <% }; %>
+            <a href="/items" class="seeAll">see all</a>
         </div>
     </div>
 

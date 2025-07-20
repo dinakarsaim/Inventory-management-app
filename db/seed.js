@@ -23,7 +23,7 @@ CREATE TABLE items (
     author varchar,
     description TEXT,
     image_url TEXT,
-    price NUMERIC(10, 2),
+    ce NUMERpriIC(10, 2),
     quantity INTEGER,
     category_id INTEGER NOT NULL REFERENCES categories(id) ON DELETE CASCADE
 );
